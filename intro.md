@@ -11,6 +11,8 @@ Here's also ROS's intro to the turtlesim if you want to look at that: https://wi
 
 ## Basics
 
+**Install ROS following [these steps](https://wiki.ros.org/noetic/Installation/Ubuntu)!**
+
 ROS always needs a rosmaster to be running before trying to run anyother ROS commands or files. Think like a manager that helps run and connect everything in ROS together (see slides for more details).
 
 There are two ways to start the ROS master:
