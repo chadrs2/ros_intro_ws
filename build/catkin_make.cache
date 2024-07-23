@@ -1,0 +1,2 @@
+turtlebot_pubsub
+-DCATKIN_DEVEL_PREFIX=/home/chadrs2/Documents/ros_intro_ws/devel -DCMAKE_INSTALL_PREFIX=/home/chadrs2/Documents/ros_intro_ws/install -G Unix Makefiles

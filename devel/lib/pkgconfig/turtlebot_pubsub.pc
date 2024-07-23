@@ -1,0 +1,8 @@
+prefix=/home/chadrs2/Documents/ros_intro_ws/devel
+
+Name: turtlebot_pubsub
+Description: Description of turtlebot_pubsub
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
