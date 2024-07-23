@@ -152,3 +152,15 @@ chmod +x turtlebot_pubsub/launch/pubsub.launch
 ```
 2. Make your launch file run both nodes. You can check my launch script at `turtlebot_pubsub/launch/pubsub.launch`.
 3. Now launch your launch script in one terminal! You don't need roscore 
+4. Everything is going at once!
+
+*Note: you can also launch another launch file within a launch file by adding the `include` argument in your launch file that follows the structure: `<include file="$(find <ros_pkg>)/launch/<roslaunch_file>.launch" />`. For example `<include file="$(find imu)/launch/prebuilt_imu.launch" />`*
+
+## Other stuff that is useful
+
+- **rosparams**: Essentially they're global variables in ROS. You can add them to your roslaunch file as well as access them within you individual rosnode scripts.
+- **rosservice**: This is a 2 way communication protocol instead of the publisher/subscriber method (see https://wiki.ros.org/rospy/Overview/Services). For example: Change the color of the line the turtle is drawing with: `rosservice call /turtle1/set_pen 255 0 0 3 0`. Or you can spawn another turtle named chad: `rosservice call /spawn 3 3 0 chad`. Useful commands 
+  - `rosservice list`: Just like `rostopic list` but lists services
+  - `rosservice info <service_name>`: Just like rostopic and rosnode info.
+  - `rosservice call <service_name> <arguments>`: Like `rostopic pub`. You can find out the arguments with `rosservice info <service_name>`.
+  - `rossrv show <service_data_type>`: Like `rosmsg info`, but there are 3 dashes that divide it. The variables above the dashes are the service call (i.e. what you send to the rosservice). The variables below the dashes are what is sent back (i.e. the response from the rosservice).
