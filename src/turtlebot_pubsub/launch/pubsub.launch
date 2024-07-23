@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Launch turtlesim -->
+    <node name='turtlesim' pkg='turtlesim' type='turtlesim_node' output='screen'/>
+    
+    <!-- Launch publisher -->
+    <node name='mover' pkg='turtlebot_pubsub' type='mover.py' output='screen'/>
+
+    <!-- Launch subscriber -->
+    <node name='watcher' pkg='turtlebot_pubsub' type='watcher.py' output='screen'/>
+</launch>

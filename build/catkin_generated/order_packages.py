@@ -2,4 +2,4 @@
 source_root_dir = '/home/chadrs2/Documents/ros_intro_ws/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/opt/ros/noetic'.split(';') if '/opt/ros/noetic' != '' else []
+underlay_workspaces = '/home/chadrs2/Documents/ros_intro_ws/devel;/opt/ros/noetic'.split(';') if '/home/chadrs2/Documents/ros_intro_ws/devel;/opt/ros/noetic' != '' else []
